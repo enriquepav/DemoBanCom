@@ -17,6 +17,7 @@ struct ContentView: View {
     @FocusState var focus2: Bool
     @State var showPassword: Bool = false
     @State var text: String = ""
+    @State private var isChecked = false
     
     
     var body: some View {
@@ -26,18 +27,14 @@ struct ContentView: View {
                     .font(.custom("Roboto-Medium",
                                   size: 16))
                 
-                Text("Iniciar Sesión")
+                Text("Inicia Sesión")
                     .font(.custom("Roboto-Medium",
                                   size: 30))
                     .fontWeight(.bold)
                 
                 TextField("Correo Electrónico", text: $username)
-                    .padding ()
                     .modifier(LoginModifier())
-                    .frame (width: 300, height: 50)
-                    .background(Color.white.opacity(0.85))
-                    .cornerRadius (10)
-                    .border(.red, width: CGFloat(wrongUsername))
+                    
                 
                 
                 ZStack(alignment: .trailing) {
@@ -60,9 +57,24 @@ struct ContentView: View {
                     })
                 }
                 
-                Button("¿Olvidaste la contraseña?") {
+                Button("¿Olvidaste la contraseña?"){
                     
-                }.font(.custom("Roboto-Medium",size: 14)).foregroundColor(.brown)
+                }
+                .font(.custom("Roboto-Medium",size: 14))
+                .foregroundColor(CustomColor.personalColor1)
+                
+                HStack {
+                    Toggle(isOn: $isChecked) {
+                        Text("Recordar correo")
+                            .font(.custom("Roboto-Medium",size: 14))
+                            .fontWeight(.bold)
+                    }
+                    .toggleStyle(CheckboxToggleStyle())
+                }
+                .padding()
+                
+                
+                
                 
                 
                 
@@ -82,6 +94,27 @@ struct LoginModifier: ViewModifier {
                 .overlay(RoundedRectangle(cornerRadius: 5).stroke(borderColor, lineWidth: 1))
     }
 }
+
+struct CheckboxToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack {
+
+            RoundedRectangle(cornerRadius: 5.0)
+                .stroke(lineWidth: 2)
+                .frame(width: 25, height: 25)
+                .cornerRadius(5.0)
+                .overlay {
+                    Image(systemName: configuration.isOn ? "checkmark" : "")
+                }
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        configuration.isOn.toggle()
+                    }
+                }
+            configuration.label
+            }
+        }
+    }
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {

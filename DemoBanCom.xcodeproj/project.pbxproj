@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F878D14529B41FC3003606DE /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = F878D14429B41FC3003606DE /* Roboto */; };
+		F878D15C29B4DA4D003606DE /* PersonalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F878D15B29B4DA4D003606DE /* PersonalColors.swift */; };
 		F8B4F82129B37FF700453DD6 /* DemoBanComApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F82029B37FF700453DD6 /* DemoBanComApp.swift */; };
 		F8B4F82329B37FF700453DD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F82229B37FF700453DD6 /* ContentView.swift */; };
 		F8B4F82529B37FFB00453DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B4F82429B37FFB00453DD6 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		F878D15229B41FD0003606DE /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		F878D15329B41FD0003606DE /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		F878D15429B4206B003606DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F878D15B29B4DA4D003606DE /* PersonalColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColors.swift; sourceTree = "<group>"; };
 		F8B4F81D29B37FF700453DD6 /* DemoBanCom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoBanCom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B4F82029B37FF700453DD6 /* DemoBanComApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoBanComApp.swift; sourceTree = "<group>"; };
 		F8B4F82229B37FF700453DD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,12 +50,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F878D14329B41E65003606DE /* Fonts */ = {
+		F878D14329B41E65003606DE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F878D14629B41FD0003606DE /* Roboto */,
+				F878D15A29B4DA06003606DE /* Colors */,
+				F878D15929B4D9E0003606DE /* Fonts */,
 			);
-			path = Fonts;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		F878D14629B41FD0003606DE /* Roboto */ = {
@@ -74,6 +77,22 @@
 				F878D15329B41FD0003606DE /* Roboto-Black.ttf */,
 			);
 			path = Roboto;
+			sourceTree = "<group>";
+		};
+		F878D15929B4D9E0003606DE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F878D14629B41FD0003606DE /* Roboto */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F878D15A29B4DA06003606DE /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				F878D15B29B4DA4D003606DE /* PersonalColors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		F8B4F81429B37FF700453DD6 = {
@@ -97,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				F878D15429B4206B003606DE /* Info.plist */,
-				F878D14329B41E65003606DE /* Fonts */,
+				F878D14329B41E65003606DE /* Sources */,
 				F8B4F82029B37FF700453DD6 /* DemoBanComApp.swift */,
 				F8B4F82229B37FF700453DD6 /* ContentView.swift */,
 				F8B4F82429B37FFB00453DD6 /* Assets.xcassets */,
@@ -185,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F878D15C29B4DA4D003606DE /* PersonalColors.swift in Sources */,
 				F8B4F82329B37FF700453DD6 /* ContentView.swift in Sources */,
 				F8B4F82129B37FF700453DD6 /* DemoBanComApp.swift in Sources */,
 			);
