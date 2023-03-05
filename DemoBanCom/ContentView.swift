@@ -23,24 +23,27 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Spacer()
-                HStack {
+                Group {
                     Spacer()
-                        .frame(width: 15)
-                    Text("Bienvenido")
-                        .font(.custom("Roboto-Medium",
-                                      size: 16))
-                    Spacer()
+                    HStack {
+                        Spacer()
+                            .frame(width: 15)
+                        Text("Bienvenido")
+                            .font(.custom("Roboto-Medium",
+                                          size: 16))
+                        Spacer()
+                    }
+                    HStack {
+                        Spacer()
+                            .frame(width: 15)
+                        Text("Inicia Sesión")
+                            .font(.custom("Roboto-Medium",
+                                          size: 32))
+                            .fontWeight(.black)
+                        Spacer()
+                    }
                 }
-                HStack {
-                    Spacer()
-                        .frame(width: 15)
-                    Text("Inicia Sesión")
-                        .font(.custom("Roboto-Medium",
-                                      size: 32))
-                        .fontWeight(.black)
-                    Spacer()
-                }
+               
                 Spacer()
                     .frame(height: 30)
 
@@ -48,7 +51,7 @@ struct ContentView: View {
                 TextField("Correo Electrónico", text: $username)
                         .modifier(LoginModifier())
                 Spacer()
-                    .frame(height: 10)
+                    .frame(height: 15)
                 
                     
                 ZStack(alignment: .trailing) {

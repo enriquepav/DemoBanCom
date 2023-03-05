@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F815461729B54A1B00DBEB0A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F878D14429B41FC3003606DE /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Roboto; path = ../../../Downloads/Roboto; sourceTree = "<group>"; };
 		F878D14729B41FD0003606DE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		F878D14829B41FD0003606DE /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -30,7 +31,6 @@
 		F878D15129B41FD0003606DE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		F878D15229B41FD0003606DE /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		F878D15329B41FD0003606DE /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
-		F878D15429B4206B003606DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F878D15B29B4DA4D003606DE /* PersonalColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColors.swift; sourceTree = "<group>"; };
 		F8B4F81D29B37FF700453DD6 /* DemoBanCom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoBanCom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B4F82029B37FF700453DD6 /* DemoBanComApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoBanComApp.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		F8B4F81F29B37FF700453DD6 /* DemoBanCom */ = {
 			isa = PBXGroup;
 			children = (
-				F878D15429B4206B003606DE /* Info.plist */,
+				F815461729B54A1B00DBEB0A /* Info.plist */,
 				F878D14329B41E65003606DE /* Sources */,
 				F8B4F82029B37FF700453DD6 /* DemoBanComApp.swift */,
 				F8B4F82229B37FF700453DD6 /* ContentView.swift */,
