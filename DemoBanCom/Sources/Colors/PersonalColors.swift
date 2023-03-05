@@ -12,5 +12,5 @@ struct CustomColor {
     
     static let personalColor1 = Color("ColorPersonal1")
     static let personalColor2 = Color("ColorPersonal2")
-    
+    static let personalColor3 = Color("ColorPersonal3")
 }

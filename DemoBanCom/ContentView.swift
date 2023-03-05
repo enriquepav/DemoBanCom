@@ -22,21 +22,35 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading){
-                Text("Bienvenido")
-                    .font(.custom("Roboto-Medium",
-                                  size: 16))
-                
-                Text("Inicia Sesión")
-                    .font(.custom("Roboto-Medium",
-                                  size: 30))
-                    .fontWeight(.bold)
-                
-                TextField("Correo Electrónico", text: $username)
-                    .modifier(LoginModifier())
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                        .frame(width: 15)
+                    Text("Bienvenido")
+                        .font(.custom("Roboto-Medium",
+                                      size: 16))
+                    Spacer()
+                }
+                HStack {
+                    Spacer()
+                        .frame(width: 15)
+                    Text("Inicia Sesión")
+                        .font(.custom("Roboto-Medium",
+                                      size: 32))
+                        .fontWeight(.black)
+                    Spacer()
+                }
+                Spacer()
+                    .frame(height: 30)
+
                     
+                TextField("Correo Electrónico", text: $username)
+                        .modifier(LoginModifier())
+                Spacer()
+                    .frame(height: 10)
                 
-                
+                    
                 ZStack(alignment: .trailing) {
                     TextField("Password", text: $text)
                         .modifier(LoginModifier())
@@ -52,16 +66,23 @@ struct ContentView: View {
                         showPassword.toggle()
                         if showPassword { focus1 = true } else { focus2 = true }
                     }, label: {
-                        Image(systemName: self.showPassword ? "eye.slash.fill" : "eye.fill").font(.system(size: 16, weight: .regular))
+                        Image(systemName: self.showPassword ? "eye.slash.fill" : "eye.fill")
+                            .font(.system(size: 20, weight: .regular)
+                            ).foregroundColor(.gray)
                             .padding()
                     })
                 }
                 
-                Button("¿Olvidaste la contraseña?"){
-                    
+                HStack {
+                    Spacer()
+                    Button("¿Olvidaste la contraseña?"){
+                    //ToDo
+                    }
+                    .font(.custom("Roboto-Medium",size: 14))
+                    .foregroundColor(CustomColor.personalColor1)
+                    .frame(alignment: .trailing)
                 }
-                .font(.custom("Roboto-Medium",size: 14))
-                .foregroundColor(CustomColor.personalColor1)
+               
                 
                 HStack {
                     Toggle(isOn: $isChecked) {
@@ -70,8 +91,45 @@ struct ContentView: View {
                             .fontWeight(.bold)
                     }
                     .toggleStyle(CheckboxToggleStyle())
+                    Spacer()
                 }
                 .padding()
+                
+                Spacer()
+                
+                VStack {
+                    Button(action: {
+                                    //TODO
+                                }, label: {
+                                    
+                                    Text("Ingresar")
+                                        .font(.custom("Roboto-Medium", fixedSize: 14))
+                                        .fontWeight(.black)
+                                        .foregroundColor(.white)
+                                        .frame(width: 320)
+                                        .padding()
+                                        .background(CustomColor.personalColor2)
+                                        .cornerRadius(10)
+                                    
+                                })
+                    
+                    Button(action: {
+                                    //TODO
+                                }, label: {
+                                    HStack (alignment: .center){
+                                        Image("googleIcon")
+                                        Text("Ingresar con Google")
+                                            .font(.custom("Roboto-Medium", fixedSize: 14))
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.white)
+                                            .padding()
+                                    }
+                                    .frame(width: 350)
+                                    .background(CustomColor.personalColor3)
+                                    .cornerRadius(10)
+                                    
+                                }).padding()
+                }
                 
                 
                 
@@ -92,6 +150,7 @@ struct LoginModifier: ViewModifier {
                 .autocapitalization(.none)
                 .padding()
                 .overlay(RoundedRectangle(cornerRadius: 5).stroke(borderColor, lineWidth: 1))
+                .frame(width: 360)
     }
 }
 
@@ -99,12 +158,13 @@ struct CheckboxToggleStyle: ToggleStyle {
     func makeBody(configuration: Configuration) -> some View {
         HStack {
 
-            RoundedRectangle(cornerRadius: 5.0)
-                .stroke(lineWidth: 2)
+            RoundedRectangle(cornerRadius: 4.0)
+                .stroke(lineWidth: 8)
                 .frame(width: 25, height: 25)
-                .cornerRadius(5.0)
+                .cornerRadius(4.0)
+                .foregroundColor(CustomColor.personalColor2)
                 .overlay {
-                    Image(systemName: configuration.isOn ? "checkmark" : "")
+                    Image(systemName: configuration.isOn ? "checkmark" : "").foregroundColor(CustomColor.personalColor2)
                 }
                 .onTapGesture {
                     withAnimation(.spring()) {
