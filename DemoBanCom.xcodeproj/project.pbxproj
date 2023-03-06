@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F815461B29B54C7C00DBEB0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F815461A29B54C7C00DBEB0A /* GoogleService-Info.plist */; };
+		F815461D29B54F3100DBEB0A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815461C29B54F3100DBEB0A /* LoginViewController.swift */; };
+		F815461F29B54F4800DBEB0A /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815461E29B54F4800DBEB0A /* LoginVM.swift */; };
 		F878D14529B41FC3003606DE /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = F878D14429B41FC3003606DE /* Roboto */; };
 		F878D15C29B4DA4D003606DE /* PersonalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F878D15B29B4DA4D003606DE /* PersonalColors.swift */; };
 		F8B4F82129B37FF700453DD6 /* DemoBanComApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F82029B37FF700453DD6 /* DemoBanComApp.swift */; };
@@ -17,6 +20,9 @@
 
 /* Begin PBXFileReference section */
 		F815461729B54A1B00DBEB0A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F815461A29B54C7C00DBEB0A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F815461C29B54F3100DBEB0A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F815461E29B54F4800DBEB0A /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		F878D14429B41FC3003606DE /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Roboto; path = ../../../Downloads/Roboto; sourceTree = "<group>"; };
 		F878D14729B41FD0003606DE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		F878D14829B41FD0003606DE /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -50,6 +56,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F815461929B54C2800DBEB0A /* Google SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				F815461A29B54C7C00DBEB0A /* GoogleService-Info.plist */,
+			);
+			path = "Google SignIn";
+			sourceTree = "<group>";
+		};
+		F815462029B56B2400DBEB0A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F815461E29B54F4800DBEB0A /* LoginVM.swift */,
+				F8B4F82229B37FF700453DD6 /* ContentView.swift */,
+				F815461C29B54F3100DBEB0A /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F815462229B56B6700DBEB0A /* UserView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserView;
+			sourceTree = "<group>";
+		};
 		F878D14329B41E65003606DE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,10 +146,12 @@
 		F8B4F81F29B37FF700453DD6 /* DemoBanCom */ = {
 			isa = PBXGroup;
 			children = (
+				F815462229B56B6700DBEB0A /* UserView */,
+				F815462029B56B2400DBEB0A /* Login */,
+				F815461929B54C2800DBEB0A /* Google SignIn */,
 				F815461729B54A1B00DBEB0A /* Info.plist */,
 				F878D14329B41E65003606DE /* Sources */,
 				F8B4F82029B37FF700453DD6 /* DemoBanComApp.swift */,
-				F8B4F82229B37FF700453DD6 /* ContentView.swift */,
 				F8B4F82429B37FFB00453DD6 /* Assets.xcassets */,
 				F8B4F82629B37FFB00453DD6 /* Preview Content */,
 			);
@@ -192,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B4F82829B37FFB00453DD6 /* Preview Assets.xcassets in Resources */,
+				F815461B29B54C7C00DBEB0A /* GoogleService-Info.plist in Resources */,
 				F8B4F82529B37FFB00453DD6 /* Assets.xcassets in Resources */,
 				F878D14529B41FC3003606DE /* Roboto in Resources */,
 			);
@@ -204,9 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F815461D29B54F3100DBEB0A /* LoginViewController.swift in Sources */,
 				F878D15C29B4DA4D003606DE /* PersonalColors.swift in Sources */,
 				F8B4F82329B37FF700453DD6 /* ContentView.swift in Sources */,
 				F8B4F82129B37FF700453DD6 /* DemoBanComApp.swift in Sources */,
+				F815461F29B54F4800DBEB0A /* LoginVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
