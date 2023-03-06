@@ -84,6 +84,8 @@ struct ContentView: View {
                     .font(.custom("Roboto-Medium",size: 14))
                     .foregroundColor(CustomColor.personalColor1)
                     .frame(alignment: .trailing)
+                    Spacer()
+                        .frame(width: 20)
                 }
                
                 
@@ -106,7 +108,7 @@ struct ContentView: View {
                                 }, label: {
                                     
                                     Text("Ingresar")
-                                        .font(.custom("Roboto-Medium", fixedSize: 14))
+                                        .font(.custom("Roboto-Medium", fixedSize: 25))
                                         .fontWeight(.black)
                                         .foregroundColor(.white)
                                         .frame(width: 320)
@@ -122,8 +124,8 @@ struct ContentView: View {
                                     HStack (alignment: .center){
                                         Image("googleIcon")
                                         Text("Ingresar con Google")
-                                            .font(.custom("Roboto-Medium", fixedSize: 14))
-                                            .fontWeight(.bold)
+                                            .font(.custom("Roboto-Medium", fixedSize: 20))
+                                            .fontWeight(.black)
                                             .foregroundColor(.white)
                                             .padding()
                                     }
