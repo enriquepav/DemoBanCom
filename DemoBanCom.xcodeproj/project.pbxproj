@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		F815461B29B54C7C00DBEB0A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F815461A29B54C7C00DBEB0A /* GoogleService-Info.plist */; };
-		F815461D29B54F3100DBEB0A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815461C29B54F3100DBEB0A /* LoginViewController.swift */; };
 		F815461F29B54F4800DBEB0A /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815461E29B54F4800DBEB0A /* LoginVM.swift */; };
+		F815462529B63DDD00DBEB0A /* DataModelUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815462429B63DDD00DBEB0A /* DataModelUsers.swift */; };
+		F815462729B6C69700DBEB0A /* DataModelPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815462629B6C69700DBEB0A /* DataModelPosts.swift */; };
+		F815462929B6CD1E00DBEB0A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815462829B6CD1E00DBEB0A /* UserViewModel.swift */; };
+		F815462C29B7610300DBEB0A /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815462B29B7610300DBEB0A /* PostsView.swift */; };
+		F815462E29B76C2A00DBEB0A /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815462D29B76C2900DBEB0A /* PostsViewModel.swift */; };
 		F878D14529B41FC3003606DE /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = F878D14429B41FC3003606DE /* Roboto */; };
 		F878D15C29B4DA4D003606DE /* PersonalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F878D15B29B4DA4D003606DE /* PersonalColors.swift */; };
 		F8B4F82129B37FF700453DD6 /* DemoBanComApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B4F82029B37FF700453DD6 /* DemoBanComApp.swift */; };
@@ -21,8 +25,12 @@
 /* Begin PBXFileReference section */
 		F815461729B54A1B00DBEB0A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F815461A29B54C7C00DBEB0A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F815461C29B54F3100DBEB0A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F815461E29B54F4800DBEB0A /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		F815462429B63DDD00DBEB0A /* DataModelUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelUsers.swift; sourceTree = "<group>"; };
+		F815462629B6C69700DBEB0A /* DataModelPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelPosts.swift; sourceTree = "<group>"; };
+		F815462829B6CD1E00DBEB0A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		F815462B29B7610300DBEB0A /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
+		F815462D29B76C2900DBEB0A /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		F878D14429B41FC3003606DE /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Roboto; path = ../../../Downloads/Roboto; sourceTree = "<group>"; };
 		F878D14729B41FD0003606DE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		F878D14829B41FD0003606DE /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -69,7 +77,6 @@
 			children = (
 				F815461E29B54F4800DBEB0A /* LoginVM.swift */,
 				F8B4F82229B37FF700453DD6 /* ContentView.swift */,
-				F815461C29B54F3100DBEB0A /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -77,8 +84,27 @@
 		F815462229B56B6700DBEB0A /* UserView */ = {
 			isa = PBXGroup;
 			children = (
+				F815462829B6CD1E00DBEB0A /* UserViewModel.swift */,
 			);
 			path = UserView;
+			sourceTree = "<group>";
+		};
+		F815462329B63D1300DBEB0A /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				F815462429B63DDD00DBEB0A /* DataModelUsers.swift */,
+				F815462629B6C69700DBEB0A /* DataModelPosts.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		F815462A29B760E700DBEB0A /* PostsView */ = {
+			isa = PBXGroup;
+			children = (
+				F815462B29B7610300DBEB0A /* PostsView.swift */,
+				F815462D29B76C2900DBEB0A /* PostsViewModel.swift */,
+			);
+			path = PostsView;
 			sourceTree = "<group>";
 		};
 		F878D14329B41E65003606DE /* Sources */ = {
@@ -146,6 +172,8 @@
 		F8B4F81F29B37FF700453DD6 /* DemoBanCom */ = {
 			isa = PBXGroup;
 			children = (
+				F815462A29B760E700DBEB0A /* PostsView */,
+				F815462329B63D1300DBEB0A /* Data Models */,
 				F815462229B56B6700DBEB0A /* UserView */,
 				F815462029B56B2400DBEB0A /* Login */,
 				F815461929B54C2800DBEB0A /* Google SignIn */,
@@ -238,11 +266,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F815461D29B54F3100DBEB0A /* LoginViewController.swift in Sources */,
+				F815462529B63DDD00DBEB0A /* DataModelUsers.swift in Sources */,
+				F815462929B6CD1E00DBEB0A /* UserViewModel.swift in Sources */,
 				F878D15C29B4DA4D003606DE /* PersonalColors.swift in Sources */,
 				F8B4F82329B37FF700453DD6 /* ContentView.swift in Sources */,
 				F8B4F82129B37FF700453DD6 /* DemoBanComApp.swift in Sources */,
+				F815462E29B76C2A00DBEB0A /* PostsViewModel.swift in Sources */,
+				F815462729B6C69700DBEB0A /* DataModelPosts.swift in Sources */,
 				F815461F29B54F4800DBEB0A /* LoginVM.swift in Sources */,
+				F815462C29B7610300DBEB0A /* PostsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

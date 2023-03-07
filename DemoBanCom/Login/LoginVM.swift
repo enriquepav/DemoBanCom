@@ -7,20 +7,19 @@
 
 import Foundation
 
-final class ViewModel: ObservableObject {
+final class LoginViewModel: ObservableObject {
     
     
-    //    func autheticateUser(username: String, password: String) {
-    //        if username.lowercased() == "bancomer@bancomer.com" {
-    //            wrongUsername = 0
-    //            if password.lowercased() == "abc123" {
-    //                wrongPassword = 0
-    //                showingLoginScreen = true
-    //            } else {
-    //                wrongPassword = 2
-    //            }
-    //        } else {
-    //            wrongUsername = 2
-    //        }
-    //    }
+    func authenticateUser(username: String, password: String) -> Bool {
+            if username.lowercased() == "bancomer@bancomer.com" {
+                print("Wrong User")
+                if password.lowercased() == "abc123" {
+                    return true
+                } else {
+                    return false
+                }
+            } else {
+                return false
+            }
+        }
 }

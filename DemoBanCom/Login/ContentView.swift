@@ -18,6 +18,10 @@ struct ContentView: View {
     @State var showPassword: Bool = false
     @State var text: String = ""
     @State private var isChecked = false
+    var viewmodel : UsersViewModel = UsersViewModel()
+    var repos : [User] = []
+    @StateObject var viewModel = LoginViewModel()
+    
     
     
     var body: some View {
@@ -31,6 +35,10 @@ struct ContentView: View {
                         Text("Bienvenido")
                             .font(.custom("Roboto-Medium",
                                           size: 16))
+                            .onAppear{viewmodel.getUsers(completed: {
+                                repos in
+                                print(repos)
+                            })}
                         Spacer()
                     }
                     HStack {
@@ -100,11 +108,13 @@ struct ContentView: View {
                 }
                 .padding()
                 
+                NavigationLink("",destination: PostsView(), isActive: $showingLoginScreen)
+                
                 Spacer()
                 
                 VStack {
                     Button(action: {
-                                    //TODO
+                        showingLoginScreen = viewModel.authenticateUser(username: username, password: text)
                                 }, label: {
                                     
                                     Text("Ingresar")
